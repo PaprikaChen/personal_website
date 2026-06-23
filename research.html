@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Paprika Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="inner-page">
+
+  <nav class="navbar">
+    <a class="nav-logo" href="index.html">Paprika</a>
+    <div class="nav-links">
+      <a href="research.html" class="active" data-i18n="nav.research">Research</a>
+      <a href="project.html" data-i18n="nav.project">Project</a>
+      <a href="about.html" data-i18n="nav.about">About Me</a>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">中文</button>
+  </nav>
+
+  <!-- full-bleed banner, sits flush below navbar -->
+  <div class="page-banner-wrap" id="bannerWrap">
+    <div style="width: 1584px; height: 396px" data-us-project="D23wfZWTp2Bqx2MIT1BC"></div>
+  </div>
+
+  <main class="inner-main no-top-rule">
+
+    <div class="paper-list">
+
+      <!-- HIDDEN: uncomment to restore
+      <article class="paper">
+        <div class="paper-body">
+          <h2 class="paper-title" data-i18n="research.title1">Hierarchical Finetuning for Visual Reasoning in VLMs (in progress) </h2>
+          <p class="paper-authors" data-i18n="research.authors1">Advised by Ehsan Adeli | Stanford University</p>
+          <p class="paper-desc" data-i18n="research.desc1">HiTune is a hierarchical fine-tuning framework designed to improve quantitative visual reasoning in vision-language models. It teaches models to decompose video-based physics problems and explicitly use tools for tasks such as object tracking, pixel measurement, scale conversion, and numerical calculation. Using LoRA-based supervised fine-tuning and STaR-style bootstrapping, HiTune aims to produce more accurate and interpretable answers instead of relying on plausible guesses.
+</p>
+          <span class="paper-venue" data-i18n="research.venue1">Aiming for ICLR 2027</span>
+        </div>
+      </article>
+      -->
+
+      <article class="paper">
+
+        <div class="paper-banner"> <img src="teaser.jpg" alt="HiTune project banner" /> </div>
+
+        <div class="paper-body">
+          <h2 class="paper-title" data-i18n="research.title2">QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models</h2>
+          <p class="paper-authors" data-i18n="research.authors2">Advised by Fei-Fei Li and Ehsan Adeli | Stanford University</p>
+          <p class="paper-desc" data-i18n="research.desc2">QuantiPhy is the first benchmark that asks vision–language models to do physics with numerical accuracy.
+Across 3,300+ video–text instances, we show that today’s VLMs often sound plausible but fail quantitatively on physical reasoning tasks—they rely more on memorized world knowledge from pretraining than on the actual video and text inputs.</p>
+          <a class="paper-link" href="https://quantiphy.stanford.edu/" data-i18n="research.venue2">CVPR 2026 · Read paper →</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <div class="paper-banner"><img src="watermarking_banner.png" alt="Real-Time Watermarking for VR Motion" /></div>
+        <div class="paper-body">
+          <h2 class="paper-title" data-i18n="research.title3">Real-Time Watermarking for VR Motion</h2>
+          <p class="paper-authors" data-i18n="research.authors3">Lead Researcher, supervised by Prof. Dianna Xu and Prof. Aline Normoyle</p>
+          <p class="paper-desc" data-i18n="research.desc3">Developed a real-time watermark embedding system using Quantization Index Modulation (QIM), optimized for VR motion data with angular velocity-based filtering. Simulated various real-world distortions—including frame rate resampling, partial frame loss, and motion blending—to test watermark robustness. Evaluated performance using both text and image watermarks, comparing accuracy, visual impact, and resilience under different attack types.</p>
+          <a class="paper-link" href="https://canva.link/iw4fu10tv5dno64" target="_blank" rel="noopener" data-i18n="research.venue3">View slides →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script type="text/javascript">
+    !function(){var u=window.UnicornStudio;if(u&&u.init){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){u.init()})}else{u.init()}}else{window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.5/dist/unicornStudio.umd.js",i.onload=function(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})}else{UnicornStudio.init()}},(document.head||document.body).appendChild(i)}}();
+  </script>
+
+  <script>
+    // Scale the 1584×396 banner to fill the viewport width
+    function scaleBanner() {
+      var wrap = document.getElementById('bannerWrap');
+      var inner = wrap && wrap.querySelector('[data-us-project]');
+      if (!inner) return;
+      var scale = wrap.offsetWidth / 1584;
+      inner.style.transform = 'scale(' + scale + ')';
+      inner.style.transformOrigin = 'top left';
+      wrap.style.height = Math.round(396 * scale) + 'px';
+    }
+    document.addEventListener('DOMContentLoaded', scaleBanner);
+    window.addEventListener('resize', scaleBanner);
+  </script>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>

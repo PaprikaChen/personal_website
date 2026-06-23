@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paprika Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="home-page">
+
+  <div class="unicorn-scene" data-us-project="WS2a7eSTHkis4CAuQ4b9"></div>
+
+  <footer class="home-bar">
+    <span class="home-name">Paprika Chen</span>
+    <nav class="home-nav">
+      <a href="research.html" data-i18n="nav.research">Research</a>
+      <span class="home-sep">/</span>
+      <a href="project.html" data-i18n="nav.project">Project</a>
+      <span class="home-sep">/</span>
+      <a href="about.html" data-i18n="nav.about">About Me</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">中文</button>
+  </footer>
+
+  <script type="text/javascript">
+    !function () {
+      var u = window.UnicornStudio;
+      if (u && u.init) {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () { u.init(); });
+        } else { u.init(); }
+      } else {
+        window.UnicornStudio = { isInitialized: false };
+        var script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.5/dist/unicornStudio.umd.js";
+        script.onload = function () {
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", function () { UnicornStudio.init(); });
+          } else { UnicornStudio.init(); }
+        };
+        (document.head || document.body).appendChild(script);
+      }
+    }();
+  </script>
+
+  <script src="js/i18n.js"></script>
+</body>
+</html>
